@@ -1,0 +1,54 @@
+CREATE TABLE users (
+ id SERIAL PRIMARY KEY,
+ username VARCHAR(100) NOT NULL UNIQUE,
+ password VARCHAR(120) NOT NULL
+);
+
+CREATE TABLE goals (
+  id SERIAL PRIMARY KEY,
+  name varchar(255) NOT NULL,
+  user_id INT,
+  deadline DATE NOT NULL,
+  description varchar(5000),
+  complete BOOLEAN DEFAULT false,
+  complete_date DATE,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE tasks (
+  id SERIAL PRIMARY KEY,
+  name varchar(255) NOT NULL,
+  date DATE NOT NULL,
+  start_time TIME NOT NULL,
+  end_time TIME NOT NULL,
+  user_id INT,
+  goal_id INT,
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (goal_id) REFERENCES goals(id)
+);
+
+
+INSERT INTO users (name)
+VALUES ('Alex');
+
+INSERT INTO users (name)
+VALUES ('Remy');
+
+INSERT INTO users (name)
+VALUES ('Bennett');
+
+INSERT INTO users (name)
+VALUES ('Juan');
+
+
+INSERT INTO goals (name, user_id, deadline, description)
+VALUES ('Finish personal project', 1, '2016-03-18', 'It may not be perfect, but hopefully it will be decent');
+
+-- This should throw an error, since there is no user with an id of 6
+-- NOTE: this does increment the id in the goals table, since it is serial
+INSERT INTO goals (name, user_id, deadline, description)
+VALUES ('Run marathon', 6, '2016-03-18', 'The Twin Cities Marathon is on this day. My goal time is 3:30.');
+
+-- This should work, since there are 4 users
+INSERT INTO goals (name, user_id, deadline, description)
+VALUES ('Get a job as a back end developer', 4, '2016-03-18', 'My first choices for companies to work for are the Nerdery and Code42.');

@@ -1,0 +1,13 @@
+<div class="addcontact" ng-controller="AddContactController">
+  <form>
+    <label for="name">Name: </label>
+    <input type="text" ng-model="name" id="name" /><br/>
+    <input type="checkbox" name="standout" ng-model="standout" value="standout" checked> Stand Out<br/>
+    <input type="checkbox" name="convoinit" ng-model="convoinit"> Initiate Convo<br/>
+    <input type="checkbox" name="invite" ng-model="invite"> Invite<br/>
+    <input type="checkbox" name="challenger" ng-model="challenger"> Challenger<br/>
+    <input type="checkbox" name="nevercontaxt" ng-model="nevercontact"> Never Contact<br/>
+
+    <button ng-click="saveContact()">Add!</button>
+  </form>
+</div>

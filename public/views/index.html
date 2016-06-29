@@ -1,0 +1,78 @@
+<!--<!DOCTYPE html>-->
+<!--<html ng-app="myApp">-->
+    <!--<head>-->
+        <!--<title>Goal Tracker</title>-->
+
+        <!--<script type="text/javascript" src="/vendors/angular.min.js"></script>-->
+        <!--<script type="text/javascript" src="/vendors/angular-route.min.js"></script>-->
+        <!--<script type="text/javascript" src="/scripts/app.js"></script>-->
+        <!--<script type="text/javascript" src="/scripts/factories/dataFactory.js"></script>-->
+        <!--<script type="text/javascript" src="/scripts/controllers/newGoalController.js"></script>-->
+        <!--<script type="text/javascript" src="/scripts/controllers/goalsController.js"></script>-->
+        <!--<script type="text/javascript" src="/scripts/controllers/tasksController.js"></script>-->
+        <!--<script type="text/javascript" src="/scripts/controllers/completeGoalsController.js"></script>-->
+        <!--<script type="text/javascript" src="/scripts/controllers/editGoalController.js"></script>-->
+        <!--<script type="text/javascript" src="/scripts/controllers/signInController.js"></script>-->
+
+        <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
+
+        <!--<meta name="google-signin-client_id" content="922184922675-59nhclh9s2881ga39ebkh46jo2ep6a15.apps.googleusercontent.com">-->
+
+        <!--<link rel="stylesheet" href="/vendors/normalize.css" />-->
+        <!--<link rel="stylesheet" href="/vendors/skeleton.css" />-->
+        <!--<link rel="stylesheet" href="/styles/style.css" />-->
+    <!--</head>-->
+    <!--<body>-->
+
+        <!--<div class="container">-->
+            <!--<nav class="twelve columns">-->
+                <!--<ul>-->
+                    <!--<li><a href="#goals">Current Goals</a></li>-->
+                    <!--<li><a href="#newGoal">New Goal</a></li>-->
+                    <!--<li><a href="#completeGoals">Completed Goals</a></li>-->
+                <!--</ul>-->
+            <!--</nav>-->
+
+            <!--<div ng-view></div>-->
+        <!--</div>-->
+
+    <!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Goal Tracker</title>
+    <link rel="stylesheet" href="/vendors/normalize.css">
+    <link rel="stylesheet" href="/vendors/skeleton.css">
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+</head>
+
+<body ng-app="myApp">
+<div class="instructions">
+    <div class="container">
+        <h1 class="lead">Goal Tracker Login</h1>
+    </div>
+</div>
+<div class="container">
+    <!-- Set form action and method -->
+    <form action="/" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username"/>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password"/>
+        </div>
+        <div>
+            <input type="submit" value="Log In"/>
+            <a href="/register">Register</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

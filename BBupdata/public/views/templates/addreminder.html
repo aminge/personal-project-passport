@@ -1,0 +1,17 @@
+<div class="addReminder" ng-controller="AddReminderController">
+  <form>
+    <div>
+      <label for="name">Name: </label>
+      <input type="text" name="name" ng-model="name" />
+    </div>
+    <div>
+      <label>Date: </label>
+      <md-datepicker name="date" ng-model="date" md-placeholder="Enter date"></md-datepicker>
+    </div>
+    <div>
+      <label>Subject: </label>
+      <textarea name="subject" ng-model="subject" placeholder="Subject..."></textarea>
+    </div>
+    <button ng-click="saveReminder()">Set Reminder</button>
+  </form>
+</div>

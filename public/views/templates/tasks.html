@@ -1,0 +1,31 @@
+<div class="six columns" id="form-container">
+    <h3>Create a New Task</h3>
+    <form>
+        <label for="name">Task Name</label>
+        <input type="text" ng-model="name" id="name" class="task-name-input" />
+        <label for="date">Date</label>
+        <input type="date" ng-model="date" id="date" />
+        <label for="start_time">Start Time</label>
+        <input type="time" ng-model="start_time" id="start_time" />
+        <label for="end_time">End Time</label>
+        <input type="time" ng-model="end_time" id="end_time" />
+
+        <button id="save-task" ng-click="submitTask()">Save Task</button>
+    </form>
+</div>
+
+<table class="u-full-width">
+    <thead>
+        <th>Task Name</th>
+        <th>Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+    </thead>
+
+    <tbody ng-repeat="task in tasks">
+        <td>{{task.name}}</td>
+        <td>{{task.date | date : 'longDate'}}</td>
+        <td>{{task.start_time}}</td>
+        <td>{{task.end_time}}</td>
+    </tbody>
+</table>

@@ -1,0 +1,53 @@
+<div>
+  <button class="addContact" ng-click="addContact($event)">Add Contact</button>
+  <table st-table="contactListDisplay" st-safe-src="contacts.list" class="table">
+    <thead>
+      <tr>
+        <th st-sort="name">Name</th>
+        <th st-sort="standout">Stand Out</th>
+        <th st-sort="convoinit">Start Convo</th>
+        <th st-sort="invite">Invite!</th>
+        <th st-sort="challenger">Challenger</th>
+        <th st-sort="nevercontact">Never Contact</th>
+        <th st-sort-default="reverse" st-sort="dateadded" class="dateDisplay">Date Added</th>
+      </tr>
+      <tr>
+        <th>
+            <input st-search="name" placeholder="Filter by name" class="searchbox" type="search"/>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="contact in contactListDisplay">
+        <td>
+          <p class="contactHover" ng-click="contactInfo(contact._id)">
+            {{contact.name}}
+          </p>
+        </td>
+        <td>
+          <img src="../images/statusicons/standoutfalse.png" ng-if="contact.standout == false || contact.standout == undefined" ng-click="standoutTrue(contact._id)"/>
+          <img src="../images/statusicons/standouttrue.png" ng-if="contact.standout == true" ng-click="standoutFalse(contact._id)"/>
+        </td>
+        <td>
+          <img src="../images/statusicons/convoinitfalse.png" ng-if="contact.convoinit == false || contact.convoinit == undefined" ng-click="convoinitTrue(contact._id)"/>
+          <img src="../images/statusicons/convoinittrue.png" ng-if="contact.convoinit == true" ng-click="convoinitFalse(contact._id)"/>
+        </td>
+        <td>
+          <img src="../images/statusicons/invitefalse.png" ng-if="contact.invite == false || contact.invite == undefined" ng-click="inviteTrue(contact._id)"/>
+          <img src="../images/statusicons/invitetrue.png" ng-if="contact.invite == true" ng-click="inviteFalse(contact._id)"/>
+        </td>
+        <td>
+          <img src="../images/statusicons/challengerfalse.png" ng-if="contact.challenger == false || contact.challenger == undefined" ng-click="challengerTrue(contact._id)"/>
+          <img src="../images/statusicons/challengertrue.png" ng-if="contact.challenger == true" ng-click="challengerFalse(contact._id)"/>
+        </td>
+        <td>
+          <img src="../images/statusicons/nevercontactfalse.png" ng-if="contact.nevercontact == false || contact.nevercontact == undefined" ng-click="nevercontactTrue(contact._id)"/>
+          <img src="../images/statusicons/nevercontacttrue.png" ng-if="contact.nevercontact == true" ng-click="nevercontactFalse(contact._id)"/>
+        </td>
+        <td class="dateDisplay">
+          {{contact.dateadded}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

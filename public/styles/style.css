@@ -1,0 +1,56 @@
+/*div, nav {*/
+    /*border: 1px solid black;*/
+/*}*/
+
+body {
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input[type=text] {
+    width: 70%;
+}
+
+textarea {
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 20px auto;
+    padding: 0;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    padding: 14px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+ul a li {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    /*background-color: #ddd;*/
+    /*margin-top: 6em;*/
+}
+
+#form-container {
+    margin: 0 auto;
+    float: none;
+}
+
+#username {
+    width: 30%;
+}
+
+button a {
+    text-decoration: none;
+    color: #555;
+}

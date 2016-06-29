@@ -1,0 +1,32 @@
+{
+  "name": "personal-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "google-auth-library": "^0.9.7",
+    "googleapis": "^3.1.0",
+    "install": "^0.6.0",
+    "npm": "^3.8.2",
+    "passport": "^0.3.2",
+    "passport-google": "^0.3.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "pg": "^4.5.1",
+    "skeleton": "^0.1.2",
+    "skeleton-css": "^2.0.4"
+  }
+}

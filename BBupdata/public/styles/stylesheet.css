@@ -1,0 +1,81 @@
+h1 {
+  text-align: center;
+}
+
+.userNav {
+  margin: 0 auto;
+  width: 50%;
+  line-height: 3em;
+}
+
+ul {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  margin: .3em;
+}
+
+.addContact, .addReminder {
+  margin: 1em;
+}
+
+.table {
+  margin: 0 auto;
+}
+
+.addcontact {
+  margin: 1em;
+}
+
+.contactinfoclass {
+  width: 80%;
+  margin: auto;
+  border: .5em solid #ccc;
+  padding: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: left;
+}
+
+.moreinfo {
+  padding: 1em;
+}
+.moreinfo input {
+  width: 75%;
+}
+.moreinfo textarea {
+  width: 75%;
+  max-width: 75%;
+}
+
+.contactHover:hover {
+  cursor: crosshair;
+}
+
+td img, .contactinfoclass img {
+  height: 3em;
+  vertical-align: middle;
+}
+
+.dateDisplay {
+  display: none;
+}
+
+th {
+  font-weight: bold;
+}
+
+.authbuttons {
+  text-align: center;
+  line-height: 20em;
+}
+
+.reminderComplete {
+  background-color: lightgreen;
+}

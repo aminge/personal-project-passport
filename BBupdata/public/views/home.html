@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <title>BBupdata</title>
+
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/vendors/smart-table.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-animate.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-aria.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-messages.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-material.min.js"></script>
+    <script type="text/javascript" src="/vendors/gapi.js"></script>
+
+    <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <script type="text/javascript" src="/scripts/factories/contactfactory.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/usercontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/contactlistcontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/calendarcontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/addcontactcontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/contactinfocontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/addremindercontroller.js"></script>
+
+    <link rel="stylesheet" href="/vendors/reset.css" />
+    <link rel="stylesheet" href="/vendors/skeleton.css" />
+    <link rel="stylesheet" href="/vendors/angular-material.min.css" />
+    <link rel="stylesheet" href="/styles/stylesheet.css" />
+
+  </head>
+  <body>
+    <header class="row headerContainer">
+      <div class="four columns">
+        <p></p>
+      </div>
+      <div class="four columns">
+        <h1>BBupdata</h1>
+      </div>
+      <div class="four columns">
+        <div ng-controller="UserController" ng-cloak="" class="menuBardemoBasicUsage">
+          <md-toolbar class="md-menu-toolbar">
+            <div layout="row">
+              <div class="userNav">
+                <md-menu-bar>
+                  <md-menu>
+                    <button ng-click="$mdOpenMenu()">
+                      Welcome, {{currentUserFirstName}}!
+                    </button>
+                    <md-menu-content>
+                      <md-menu-item>
+                        <md-button ng-href="/auth/logout">
+                          Log Out
+                        </md-button>
+                      </md-menu-item>
+                      <md-menu-divider></md-menu-divider>
+                      <md-menu-item>
+                        <md-button>
+                          TestButton
+                        </md-button>
+                      </md-menu-item>
+                    </md-menu-content>
+                  </md-menu>
+                </md-menu-bar>
+              </div>
+            </div>
+          </md-toolbar>
+        </div>
+      </div>
+    </header>
+
+    <div class="row" ng-include="'./templates/nav.html'"></div>
+
+    <main ng-view class="row"></main>
+
+  </body>
+</html>

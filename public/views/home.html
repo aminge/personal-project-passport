@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Goal Tracker</title>
+
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/factories/dataFactory.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/newGoalController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/goalsController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/tasksController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/completeGoalsController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/editGoalController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/signInController.js"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <meta name="google-signin-client_id" content="922184922675-59nhclh9s2881ga39ebkh46jo2ep6a15.apps.googleusercontent.com">
+
+    <link rel="stylesheet" href="/vendors/normalize.css" />
+    <link rel="stylesheet" href="/vendors/skeleton.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+
+<div class="container">
+    <nav class="twelve columns">
+        <ul>
+            <a href="#goals"><li>Current Goals</li></a>
+            <a href="#newGoal"><li>New Goal</li></a>
+            <a href="#completeGoals"><li>Completed Goals</li></a>
+        </ul>
+    </nav>
+
+    <div ng-view></div>
+</div>
+
+</body>
+</html>
